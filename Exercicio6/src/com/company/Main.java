@@ -30,6 +30,8 @@ public class Main {
             respostas.add("fruta");
 
             int i = 0;
+            int pontuacao =0;
+            int erro = 0;
 
             System.out.println();
 
@@ -38,13 +40,17 @@ public class Main {
                 String resposta = sc.next();
                 if (resposta.equals(respostas.get(i))) {
                     System.out.println("Voce acertou!!!!");
+                    pontuacao++;
                 }else {
                     System.out.println("Voce errou, vá estudar!");
+                    erro++;
                 }
+
             }
+        System.out.println("Nome do usuario: " + nome);
+        System.out.println("Acertou: " + pontuacao);
+        System.out.println("Errou: " + erro);
 
-
-
-
+        }
     }
-}
+
