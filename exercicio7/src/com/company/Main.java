@@ -23,10 +23,10 @@ public class Main {
 
         while(tentativaAtual <= maximoTentativas){
             System.out.println("Informe seu login:");
-            String loginInformado = sc.next();
+            String loginInformado = sc.next().toLowerCase();
 
             System.out.println("Informe sua senha:");
-            String senhaInformada = sc.next();
+            String senhaInformada = sc.next().toLowerCase();
 
             if (loginInformado.equals(loginCadastrado.get(0)) && senhaInformada.equals(senhaCadastrada.get(0))) {
 
