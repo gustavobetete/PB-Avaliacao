@@ -7,6 +7,17 @@ public class Funcionario {
     double salarioLiquido;
     double desconto;
 
+    public void calculaBonus(double salario){
+        if (salario <= 1000) {
+            this.bonus = salario * 0.2;
+        }else if (salario <= 2000){
+            this.bonus = salario * 0.1;
+        }else if (salario > 2000){
+            this.desconto = salario * 0.1;
+        }
+        this.salarioLiquido = (salario - desconto) + bonus;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -19,17 +30,19 @@ public class Funcionario {
         return salario;
     }
 
+    public double getDesconto() {
+        return desconto;
+    }
+
     public void setSalario(double salario) {
         this.salario = salario;
+        calculaBonus(salario);
     }
 
     public double getBonus() {
         return bonus;
     }
 
-    public void setBonus(double bonus) {
-        this.bonus = bonus;
-    }
 
     public double getSalarioLiquido() {
         return salarioLiquido;
@@ -37,13 +50,5 @@ public class Funcionario {
 
     public void setSalarioLiquido(double salarioLiquido) {
         this.salarioLiquido = salarioLiquido;
-    }
-
-    public double getDesconto() {
-        return desconto;
-    }
-
-    public void setDesconto(double desconto) {
-        this.desconto = desconto;
     }
 }
