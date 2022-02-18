@@ -37,20 +37,26 @@ public class Main {
 
             for (i = 0; i < perguntas.size(); i++) {
                 System.out.println(perguntas.get(i));
-                String resposta = sc.next();
+                String resposta = sc.next().toLowerCase();
                 if (resposta.equals(respostas.get(i))) {
-                    System.out.println("Voce acertou!!!!");
+
+                    System.out.println("Voce acertou!!!!\n");
                     pontuacao++;
                 }else {
-                    System.out.println("Voce errou, vá estudar!");
+
+                    System.out.println("Voce errou, vá estudar!\n");
                     erro++;
                 }
 
             }
+        System.out.println("-------------------------");
         System.out.println("Nome do usuario: " + nome);
+        System.out.println("-------------------------");
         System.out.println("Acertou: " + pontuacao);
+        System.out.println("-------------------------");
         System.out.println("Errou: " + erro);
+        System.out.println("-------------------------");
 
-        }
+    }
     }
 
